@@ -1,0 +1,1049 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Retirement Income Guide</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="A free, plain-English guide to how annuities work, what they can and can't promise, and five questions to ask before committing your money.">
+<!-- PREVIEW: remove this robots tag at launch -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0F2340">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;600;700&display=swap">
+<style>
+/* Layout concept: a printed retirement booklet. Navy cover band, ivory reading pages, gold used only for rules and numerals. Single deliberate light look. */
+:root{
+  color-scheme:light;
+  --navy:#0F2340; --navy-2:#1A3358; --ivory:#FAF6EC; --paper:#FFFDF8;
+  --ink:#15233B; --muted:#465168; --gold:#D8BC7C; --gold-deep:#745820; --line:#DCD0B6; --alert:#8A2A1E;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  --gutter-l:max(20px,env(safe-area-inset-left,0px)); --gutter-r:max(20px,env(safe-area-inset-right,0px));
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ivory);color:var(--ink);font:400 1.25rem/1.6 var(--serif)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.14;text-wrap:balance;margin:0}
+p,ul,ol{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold-deep);outline-offset:3px;border-radius:2px}
+.on-navy :focus-visible{outline-color:var(--gold)}
+[tabindex="-1"]:focus{outline:none}
+.wrap{max-width:1180px;margin-inline:auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.skip{position:absolute;left:12px;top:-80px;background:var(--paper);color:var(--ink);padding:12px 18px;font:600 1rem var(--sans);z-index:30}
+.skip:focus{top:12px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:60px;padding:14px 26px;border:2px solid transparent;border-radius:4px;font:700 1.125rem/1.25 var(--sans);text-align:center;text-decoration:none;cursor:pointer;width:100%;transition:background-color .15s,color .15s}
+.btn-gold{background:var(--gold);color:var(--navy)} .btn-gold:hover{background:#E6CE96}
+.btn-navy{background:var(--navy);color:var(--paper)} .btn-navy:hover{background:var(--navy-2)}
+.btn-line{background:transparent;color:var(--ink);border-color:var(--ink)} .btn-line:hover{background:#F0E8D6}
+.btn[disabled]{background:#D9D5CB;color:#4C4F57;cursor:not-allowed;border-color:transparent}
+
+/* Top bands */
+.preview-bar{background:#F3E2B5;color:#2A2110;font:600 1rem/1.4 var(--sans)}
+.preview-bar .wrap{padding-block:12px}
+.mast{background:var(--navy);color:var(--paper);font:600 1.0625rem var(--sans)}
+.mast .wrap{padding-block:18px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+
+/* Hero */
+.hero{background:var(--navy);color:var(--paper);overflow:hidden}
+.hero .wrap{display:grid;gap:48px;padding-block:28px 64px}
+.hero-copy{display:grid;gap:22px;min-width:0}
+.eyebrow{font:700 .95rem/1.3 var(--sans);letter-spacing:.14em;color:var(--gold)}
+.hero h1{font-size:clamp(2.7rem,10.5vw,4.9rem);letter-spacing:-.012em;line-height:1.04}
+.hero .sub{font-size:1.375rem;line-height:1.5;color:#E9E5DA;max-width:34em}
+.hero-cta{display:grid;gap:12px;max-width:440px}
+.hero-cta small{font:400 1.0625rem var(--sans);color:#E9E5DA;text-align:center}
+
+/* Book mockup */
+.book-stage{display:flex;justify-content:center;perspective:1400px;padding-block:6px}
+.book{position:relative;width:min(280px,72vw);aspect-ratio:5/7;transform:rotateY(-13deg) rotateX(2deg);transform-style:preserve-3d;box-shadow:26px 30px 46px rgba(0,0,0,.46)}
+.book::after{content:"";position:absolute;top:1.2%;bottom:1.2%;right:-11px;width:11px;background:repeating-linear-gradient(to bottom,#F3EDDF 0 2px,#CFC6B1 2px 3px);transform:rotateY(62deg);transform-origin:left}
+.cover{position:absolute;inset:0;background:var(--ivory);color:var(--navy);display:flex;flex-direction:column;padding:9% 9% 7% 13%;overflow:hidden}
+.cover::before{content:"";position:absolute;inset:0 auto 0 0;width:6%;background:linear-gradient(90deg,#D9CFB7,#F5EFE0 60%,#CFC4A8)}
+.cover svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:50%}
+.cover .c-tag{font:700 clamp(.55rem,1.6vw,.68rem)/1.3 var(--sans);letter-spacing:.14em;color:var(--gold-deep)}
+.cover .c-title{font:500 clamp(1.7rem,7.2vw,2.15rem)/1.05 var(--serif);margin-top:12%}
+.cover .c-rule{width:34%;height:2px;background:var(--gold-deep);margin:9% 0}
+.cover .c-sub{font:400 clamp(.92rem,3.4vw,1.06rem)/1.28 var(--serif)}
+.cover .c-brand{margin-top:auto;position:relative;font:600 clamp(.6rem,1.7vw,.72rem)/1.2 var(--sans);letter-spacing:.04em}
+
+/* Guide layout */
+.guide{padding-block:56px 40px}
+.guide-grid{display:grid;gap:44px}
+.guide-head{display:grid;gap:14px;max-width:40rem}
+.guide-head .kicker{font:700 .95rem var(--sans);letter-spacing:.1em;color:var(--gold-deep)}
+.guide-head h2{font-size:clamp(2.1rem,7.4vw,3.1rem)}
+.guide-head p{color:var(--muted);font:400 1.0625rem/1.5 var(--sans)}
+.print-row{display:grid;gap:8px;max-width:360px}
+.fb-note{font:400 1rem/1.45 var(--sans);color:var(--muted)}
+.toc{border-block:1px solid var(--line);padding-block:18px;min-width:0}
+.toc h2{font:700 .95rem var(--sans);letter-spacing:.1em;color:var(--gold-deep);margin-bottom:8px}
+.toc ol{list-style:none;padding:0;display:grid}
+.toc a{display:block;padding:9px 0;min-height:44px;font:400 1.0625rem/1.35 var(--sans);text-decoration:none;color:var(--ink)}
+.toc a:hover{text-decoration:underline}
+.toc a[aria-current="true"]{font-weight:700;color:var(--gold-deep)}
+.article{display:grid;gap:60px;min-width:0;max-width:40rem}
+.sec{display:grid;gap:18px;scroll-margin-top:24px;min-width:0}
+.sec h2{font-size:clamp(1.9rem,6.4vw,2.5rem)}
+.sec h3{font:600 1.1875rem/1.3 var(--sans);margin-top:8px}
+.q-mark{font:500 1.25rem var(--serif);font-style:italic;color:var(--gold-deep);display:block;margin-bottom:6px}
+.sec ul{padding-left:1.15em;display:grid;gap:10px}
+.lede{font-size:1.4375rem;line-height:1.5}
+
+/* Compare table: stacked cards on phones, table from 760px */
+.compare{width:100%;border-collapse:collapse;font:400 1.0625rem/1.45 var(--sans)}
+.compare th{font-weight:700;text-align:left}
+.compare thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.compare tr{display:block;background:var(--paper);border:1px solid var(--line);margin-bottom:16px}
+.compare tbody th{display:block;background:var(--navy);color:var(--paper);padding:12px 16px}
+.compare td{display:block;padding:12px 16px;border-top:1px solid var(--line)}
+.compare td::before{content:attr(data-label);display:block;font-weight:700;color:var(--gold-deep);font-size:1rem}
+
+/* Callouts */
+.two-num{display:grid;gap:14px}
+.num-card{background:var(--paper);border:1px solid var(--line);padding:18px;display:grid;gap:6px;font:400 1.0625rem/1.5 var(--sans)}
+.num-card strong{font:500 1.5rem/1.2 var(--serif)}
+.note{border-top:2px solid var(--gold-deep);padding-top:12px;font:400 1.0625rem/1.5 var(--sans);color:var(--muted)}
+
+/* Mid-guide consultation */
+.consult-inline{background:var(--navy);color:var(--paper);padding:24px 20px;display:grid;gap:16px}
+.consult-inline p{font-size:1.25rem;line-height:1.45}
+.consult-inline small{font:400 1rem/1.45 var(--sans);color:#E3DFD3}
+
+.cta-soft{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--gold-deep);padding:22px 20px;display:grid;gap:14px}
+.cta-soft p{font-size:1.25rem;line-height:1.45}
+.cta-soft small{font:400 1rem/1.45 var(--sans);color:var(--muted)}
+.mast-cta{display:inline-flex;align-items:center;min-height:44px;padding:6px 12px;border:1px solid var(--gold);border-radius:3px;color:var(--gold);font:600 .95rem/1.2 var(--sans);text-decoration:none;text-align:center}
+.mast-cta:hover{background:var(--navy-2)}
+.hero-alt{color:var(--paper);font:600 1.0625rem/1.4 var(--sans);text-align:center;padding:8px 0}
+.toc a.toc-cta{display:none}
+
+/* Checklist + worksheet */
+.check-list{list-style:none;padding:0!important;display:grid;gap:0!important;font:400 1.125rem/1.4 var(--sans)}
+.check-list label{display:grid;grid-template-columns:30px 1fr;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.check-list input{width:28px;height:28px;margin:0;accent-color:var(--navy)}
+.ws{background:var(--paper);border:1px solid var(--line);padding:20px;display:grid;gap:18px;font-family:var(--sans)}
+.ws fieldset{border:0;padding:0;margin:0;display:grid;gap:10px;min-width:0}
+.ws legend{font:600 1.375rem/1.2 var(--serif);padding:0;margin-bottom:8px}
+.ws-row{display:grid;grid-template-columns:minmax(0,1fr) 148px;gap:12px;align-items:center;font-size:1.0625rem;line-height:1.3}
+.money{position:relative;display:block}
+.money span{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:1.0625rem}
+.money input{width:100%;min-height:52px;padding:8px 10px 8px 28px;font:400 1.125rem var(--sans);text-align:right;border:1.5px solid #7B8496;border-radius:3px;background:#fff;color:var(--ink);font-variant-numeric:tabular-nums}
+.ws-totals{display:grid;gap:8px;border-top:2px solid var(--navy);padding-top:14px;font-size:1.0625rem}
+.ws-total{display:flex;justify-content:space-between;gap:12px;font-variant-numeric:tabular-nums}
+.ws-total.big{font:600 1.5rem/1.25 var(--serif);align-items:baseline}
+.ws-msg{font-size:1.0625rem;line-height:1.5;color:var(--muted)}
+.ws-label{font:700 .95rem/1.4 var(--sans);letter-spacing:.02em;color:var(--gold-deep)}
+.btn-row{display:grid;gap:10px}
+
+/* Next step and booking */
+.next{background:var(--navy);color:var(--paper);scroll-margin-top:0}
+.next .wrap{padding-block:60px;display:grid;gap:24px}
+.next-inner{max-width:40rem;display:grid;gap:20px}
+.next h2{font-size:clamp(2.1rem,7.4vw,3.1rem)}
+.next .value{font-size:1.4375rem;line-height:1.45}
+.next h3{font:700 .95rem var(--sans);letter-spacing:.1em;color:var(--gold);margin-bottom:8px}
+.next ul{padding-left:1.15em;display:grid;gap:8px}
+.next .plain{font:400 1.0625rem/1.55 var(--sans);color:#E9E5DA}
+.book-sec{background:var(--ivory);scroll-margin-top:0}
+.book-sec .wrap{padding-block:56px}
+.book-card{max-width:40rem;margin-inline:auto;display:grid;gap:24px;font-family:var(--sans)}
+.book-card h2{font:500 clamp(1.9rem,6.4vw,2.5rem)/1.14 var(--serif)}
+.preview-note{background:#F3E2B5;color:#2A2110;padding:16px 18px;font:400 1.0625rem/1.5 var(--sans);display:grid;gap:8px}
+.preview-note ul{padding-left:1.15em;font-size:1rem}
+.panel{border:0;padding:0;margin:0;display:grid;gap:18px;min-width:0}
+.panel + .panel{border-top:1px solid var(--line);padding-top:26px;margin-top:26px}
+.panel h3{font:600 1.375rem/1.25 var(--serif)}
+.steps-form[data-live="true"] .panel + .panel{border-top:0;padding-top:0;margin-top:0}
+.field{display:grid;gap:7px;min-width:0}
+.field label,.lbl{font:600 1.0625rem/1.3 var(--sans)}
+.field .opt{font-weight:400;color:var(--muted)}
+.field input,.field select{width:100%;min-height:58px;padding:10px 14px;font:400 1.125rem var(--sans);border:1.5px solid #6F788B;border-radius:3px;background:#fff;color:var(--ink)}
+.field input[disabled],.field select[disabled]{background:#EEEAE0;border-color:#B5AE9E;color:#4C4F57}
+.field [aria-invalid="true"]{border-color:var(--alert);border-width:2px}
+.err{color:var(--alert);font:600 1rem/1.4 var(--sans)}
+.two{display:grid;gap:18px}
+.recip{background:var(--paper);border:1px solid var(--line);padding:16px 18px;font-size:1.0625rem;line-height:1.5;display:grid;gap:6px}
+.slots{display:grid;gap:10px}
+.slot{display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:center;padding:14px;border:1.5px solid #6F788B;border-radius:3px;background:#fff;cursor:pointer;min-height:58px;font-size:1.0625rem}
+.slot input{width:24px;height:24px;margin:0;accent-color:var(--navy)}
+.slot:has(input:checked){border-color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy)}
+.consent{display:grid;grid-template-columns:28px 1fr;gap:12px;font-size:1.0625rem;line-height:1.5;cursor:pointer}
+.consent input{width:26px;height:26px;margin:0;accent-color:var(--navy)}
+.hint{font-size:1rem;line-height:1.5;color:var(--muted)}
+.status{font-size:1.0625rem;line-height:1.5}
+.status:empty{display:none}
+.status.bad{background:#FBECE7;color:#6E1F15;padding:14px 16px}
+.done{background:var(--paper);border:1px solid var(--line);padding:22px;display:grid;gap:12px;font-size:1.125rem}
+.link-btn{background:none;border:0;padding:8px 0;font:600 1.0625rem var(--sans);color:var(--ink);text-decoration:underline;cursor:pointer;justify-self:start}
+
+/* Footer */
+.foot{background:var(--navy);color:#E9E5DA;font:400 1rem/1.6 var(--sans)}
+.foot .wrap{padding-block:40px 110px;display:grid;gap:14px;max-width:880px}
+.foot a{color:var(--paper)}
+.foot nav{display:flex;flex-wrap:wrap;gap:8px 22px;padding-top:6px}
+
+/* Sticky mobile button */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(15,35,64,.97);padding:9px max(14px,env(safe-area-inset-right,0px)) calc(9px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px));transform:translateY(110%);transition:transform .2s;visibility:hidden}
+.sticky.show{transform:none;visibility:visible}
+.sticky a{display:flex;align-items:center;justify-content:center;min-height:50px;font:700 1.0625rem/1.2 var(--sans);color:var(--navy);background:var(--gold);border-radius:3px;text-decoration:none;text-align:center;padding:6px 10px}
+
+@media (min-width:560px){
+  .btn-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .two{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .two-num{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:760px){
+  body{font-size:1.3125rem}
+  .sticky{display:none}
+  .foot .wrap{padding-bottom:48px}
+  .compare{table-layout:fixed}
+  .compare thead{position:static;width:auto;height:auto;clip-path:none;display:table-header-group}
+  .compare tr{display:table-row;background:none;border:0;margin:0}
+  .compare th,.compare td,.compare tbody th{display:table-cell;padding:13px 12px;vertical-align:top;border-top:1px solid var(--line);background:none;color:var(--ink)}
+  .compare thead th{background:var(--navy);color:var(--paper);border:0}
+  .compare td::before{content:none}
+  .table-wide{width:min(46rem,100%)}
+  .consult-inline{padding:30px}
+}
+@media (min-width:1000px){
+  .hero .wrap{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);align-items:center;padding-block:44px 88px}
+  .book{width:320px}
+  .guide-grid{grid-template-columns:270px minmax(0,1fr);gap:64px;align-items:start}
+  .guide-head{grid-column:1/-1}
+  .toc{position:sticky;top:20px;max-height:calc(100vh - 40px);overflow:auto}
+  .toc a{min-height:0;padding:7px 0;font-size:1rem}
+  .toc a.toc-cta{display:inline-flex;margin-top:14px;min-height:56px;padding:10px 14px;font:700 1rem/1.25 var(--sans);color:var(--paper)}
+  .toc a.toc-cta:hover{text-decoration:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+@media print{
+  @page{margin:.7in}
+  html{font-size:12pt;scroll-behavior:auto}
+  body{background:#fff;color:#000;font-size:12pt;line-height:1.45}
+  .skip,.preview-bar,.mast,.hero,.toc,.sticky,.consult-inline,.next,.book-sec,.print-row,.btn-row,.no-print{display:none!important}
+  .guide{padding:0}
+  .wrap{max-width:none;padding:0}
+  .guide-grid,.article{display:block;max-width:none}
+  .guide-head{display:block;margin-bottom:14pt}
+  .guide-head h2{font-size:24pt}
+  .sec{display:block;margin-bottom:16pt}
+  .sec > *{margin-bottom:7pt}
+  .sec h2{font-size:17pt;break-after:avoid}
+  .sec h3{font-size:12pt;break-after:avoid}
+  .lede{font-size:13pt}
+  .compare{table-layout:fixed;font-size:9.5pt}
+  .compare thead{position:static;width:auto;height:auto;clip-path:none;display:table-header-group}
+  .compare tr{display:table-row;background:none;border:0;break-inside:avoid}
+  .compare th,.compare td,.compare tbody th{display:table-cell;padding:5pt;border:1px solid #777;background:none;color:#000;vertical-align:top}
+  .compare thead th{background:none;color:#000}
+  .compare td::before{content:none}
+  .two-num{display:grid;grid-template-columns:1fr 1fr;gap:8pt}
+  .num-card,.ws{border:1px solid #777;background:none;break-inside:avoid}
+  .check-list label{padding:5pt 0;break-inside:avoid;font-size:11pt}
+  .check-list input{width:14pt;height:14pt}
+  .money input{min-height:0;padding:2pt 4pt 2pt 16pt;font-size:11pt;border:1px solid #777}
+  .foot{background:none;color:#000;font-size:9pt;border-top:1px solid #777;margin-top:16pt}
+  .foot .wrap{padding:10pt 0 0}
+  .foot a{color:#000}
+  .foot nav{display:none}
+  body.print-one .guide-head,body.print-one .sec:not(.print-only){display:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#guide">Skip to the guide</a>
+
+<div class="preview-bar" id="previewBar" role="status">
+  <div class="wrap">Preview only. Booking and lead collection are off until the business details are configured. The guide below is complete.</div>
+</div>
+
+<header class="mast on-navy"><div class="wrap"><span data-cfg="brand">[BRAND]</span><a class="mast-cta" href="#book" data-consult="header">Free 30-Minute Consultation</a></div></header>
+
+<section class="hero on-navy" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="eyebrow">FREE ANNUITY GUIDE</p>
+      <h1 id="hero-title">Will Your Retirement Savings Last as Long as You Do?</h1>
+      <p class="sub">Read the free guide to how annuities work, what they can—and can't—promise, and five questions to ask before committing your money.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#guide" data-track="read_guide_click">Read My Free Guide</a>
+        <small>Free to read. No purchase required.</small>
+        <a class="hero-alt" href="#book" data-consult="hero">Prefer to talk it through? Schedule a Free 30-Minute Consultation</a>
+      </div>
+    </div>
+    <div class="book-stage">
+      <div class="book" role="img" aria-label="Cover of The Retirement Income Guide: 5 Questions to Ask Before Buying an Annuity">
+        <div class="cover" aria-hidden="true">
+          <svg viewBox="0 0 280 200" preserveAspectRatio="xMidYMax slice" fill="none" stroke="#B8975A" stroke-width="1.1">
+            <circle cx="214" cy="200" r="46"/><circle cx="214" cy="200" r="78"/><circle cx="214" cy="200" r="110"/><circle cx="214" cy="200" r="142"/>
+          </svg>
+          <div class="c-tag">FREE GUIDE</div>
+          <div class="c-title">The Retirement Income Guide</div>
+          <div class="c-rule"></div>
+          <div class="c-sub">5 Questions to Ask Before Buying an Annuity</div>
+          <div class="c-brand" data-cfg="brand">[BRAND]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main id="guide" class="guide" tabindex="-1">
+  <div class="wrap guide-grid">
+    <div class="guide-head">
+      <p class="kicker">THE COMPLETE GUIDE</p>
+      <h2>The Retirement Income Guide: 5 Questions to Ask Before Buying an Annuity</h2>
+      <p>About a 10-minute read. Everything is here on this page. You don't need to give us any information to read it.</p>
+      <div class="print-row">
+        <button class="btn btn-line" type="button" data-print="all">Print / Save as PDF</button>
+        <p class="fb-note" data-fb-note hidden>Reading inside the Facebook or Instagram app? Open this page in your phone's browser to print or save it.</p>
+      </div>
+    </div>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <h2 id="toc-title">Contents</h2>
+      <ol>
+        <li><a href="#problem">Saving and income are different jobs</a></li>
+        <li><a href="#what">What an annuity is</a></li>
+        <li><a href="#types">Three main types compared</a></li>
+        <li><a href="#q1">Question 1: What job would this money do?</a></li>
+        <li><a href="#q2">Question 2: How much access will I need?</a></li>
+        <li><a href="#q3">Question 3: What are the costs and trade-offs?</a></li>
+        <li><a href="#q4">Question 4: What exactly is guaranteed?</a></li>
+        <li><a href="#q5">Question 5: How do taxes work?</a></li>
+        <li><a href="#not-fit">When an annuity may not fit</a></li>
+        <li><a href="#owners">If you already own an annuity</a></li>
+        <li><a href="#checklist">Checklist for your conversation</a></li>
+        <li><a href="#worksheet">Monthly income worksheet</a></li>
+      </ol>
+      <a class="btn btn-navy toc-cta" href="#book" data-consult="contents">Schedule a Free 30-Minute Consultation</a>
+    </nav>
+
+    <article class="article">
+
+      <section class="sec" id="problem" data-section>
+        <h2>Saving money and creating income are different jobs</h2>
+        <p class="lede">During your working years, the job was easy to describe: put money away and let it grow. Retirement changes the job.</p>
+        <p>Now the same savings may need to pay your bills for decades. Nobody can tell you in advance how long you'll live, what markets will do, or what things will cost.</p>
+        <p>That raises new questions. How much can I safely take out each month? What if the market falls just as I start withdrawing? What if I live much longer than I planned?</p>
+        <p>An annuity is one possible tool for part of this problem. It isn't right for everyone, and it doesn't need to hold all of your money. This guide explains how annuities work so you can decide whether one deserves a closer look.</p>
+      </section>
+
+      <section class="sec" id="what" data-section>
+        <h2>What an annuity is</h2>
+        <p>An annuity is a contract with an insurance company. You pay the insurer, either all at once or over time. In return, the insurer makes the specific promises written in that contract.</p>
+        <p>Those promises can include crediting interest, paying income for a set number of years, or paying income for life. Some annuities start paying soon after you buy them. Others, called deferred annuities, hold your money first and pay out later, if you choose.</p>
+        <p>The word to remember is <em>contract</em>. Two annuities can work very differently. One may offer lifetime income. Another may offer it only if you convert the contract to payments or add an optional feature. Judge the contract in front of you, not what you've heard about annuities in general.</p>
+      </section>
+
+      <section class="sec" id="types" data-section>
+        <h2>Three main types of annuity</h2>
+        <h3>Fixed annuity</h3>
+        <p>The insurer credits interest at a rate stated in the contract for a set period. When that period ends, the rate may change, subject to any minimum in the contract. Market swings don't directly reduce your value, but early withdrawals can cost you.</p>
+        <h3>Fixed indexed annuity</h3>
+        <p>Interest is calculated by a formula tied to a market index. Your money is not invested in the index. You don't own the stocks in it, and you generally don't receive their dividends.</p>
+        <p>Three terms shape what you're credited. A <strong>cap</strong> limits the most interest you can earn in a period. A <strong>participation rate</strong> sets how much of the index's gain counts. A <strong>spread</strong> is subtracted from the gain. Insurers can often change these at renewal, within contract limits. In some periods, you may be credited nothing.</p>
+        <h3>Variable annuity</h3>
+        <p>Your money goes into investment options called subaccounts, which are similar to mutual funds. Your value rises and falls with them, and you can lose money, including your principal. Variable annuities are securities. They're sold with a prospectus, which you should read before deciding. Optional guarantees may be available at added cost.</p>
+        <div class="table-wide">
+          <table class="compare">
+            <caption class="note" style="caption-side:bottom;text-align:left;margin-top:12px">General comparison only. Terms vary by contract, insurer and state.</caption>
+            <thead><tr><th scope="col">Feature</th><th scope="col">Fixed</th><th scope="col">Fixed indexed</th><th scope="col">Variable</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">How value grows</th><td data-label="Fixed">Interest rate set by the contract</td><td data-label="Fixed indexed">Formula tied to an index</td><td data-label="Variable">Results of chosen subaccounts</td></tr>
+              <tr><th scope="row">Can market drops lower your value?</th><td data-label="Fixed">Not directly</td><td data-label="Fixed indexed">Not from index losses, but fees and charges can reduce it</td><td data-label="Variable">Yes, including principal</td></tr>
+              <tr><th scope="row">What limits your result</th><td data-label="Fixed">The credited rate</td><td data-label="Fixed indexed">Caps, participation rates, spreads</td><td data-label="Variable">Market results and layered fees</td></tr>
+              <tr><th scope="row">Is lifetime income automatic?</th><td data-label="Fixed">No. Only if the contract offers it and you elect it</td><td data-label="Fixed indexed">No. Only if the contract offers it and you elect it</td><td data-label="Variable">No. Only if the contract offers it and you elect it</td></tr>
+              <tr><th scope="row">What to request</th><td data-label="Fixed">Contract terms and rate period</td><td data-label="Fixed indexed">Crediting terms and how they can change</td><td data-label="Variable">The prospectus</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">Don't confuse these with registered index-linked annuities. Those are a separate product that can lose value.</p>
+      
+        <aside class="cta-soft no-print" aria-label="Free consultation">
+          <p>Not sure which type you're being shown, or whether any of them fits? Ask a licensed professional to walk you through it.</p>
+          <a class="btn btn-navy" href="#book" data-consult="after_types">Schedule a Free 30-Minute Consultation</a>
+          <small>With a licensed insurance professional who may discuss insurance products. No obligation to purchase.</small>
+        </aside>
+      </section>
+
+      <section class="sec" id="q1" data-section>
+        <h2><span class="q-mark">Question 1</span>What job would this money do?</h2>
+        <p>Before you compare products, decide what this specific money is for. Most goals fit one of three jobs.</p>
+        <ul>
+          <li><strong>Income.</strong> Turning savings into regular payments. Ask how much, starting when, for how long, and what happens to the payments when you die.</li>
+          <li><strong>Accumulation.</strong> Growing money over a number of years. Ask how growth is determined and how long the money must stay put.</li>
+          <li><strong>Legacy.</strong> Leaving money to someone. Ask how the death benefit works, whether taking income reduces it, and how your beneficiaries would be taxed.</li>
+        </ul>
+        <p>One contract rarely does all three equally well. A choice that increases income may reduce what passes to your family. Some life-only payouts stop when you die, even if little has been paid. Name the job first, then judge whether the contract does it.</p>
+      </section>
+
+      <section class="sec" id="q2" data-section>
+        <h2><span class="q-mark">Question 2</span>How much access to the money will I need?</h2>
+        <p>Annuities are generally built for long-term money. Getting out early can be expensive, so plan for access before you sign.</p>
+        <h3>Surrender periods</h3>
+        <p>Many deferred annuities charge a surrender fee if you take out more than the allowed amount during the first several years. The length and size of the charge depend on the contract, and the charge often shrinks over time. Ask to see the schedule, year by year.</p>
+        <h3>Withdrawal limits</h3>
+        <p>Many contracts let you withdraw a limited amount each year without a surrender charge. Taking more can trigger the charge. Withdrawals can also reduce an income benefit or death benefit, and they may have tax consequences. Some contracts waive charges for events such as a nursing home stay or terminal illness, but only if the contract says so.</p>
+        <p>If you convert a contract into a stream of payments, you may give up access to a lump sum altogether.</p>
+        <h3>Emergency liquidity</h3>
+        <p>Before you put money into any annuity, set aside separate money you can reach without penalty for repairs, medical bills and family needs. Then try this test: if I needed a large sum next year, where would it come from? If the only answer is the annuity, stop and rethink.</p>
+        <p>Many states also require a short free-look period after delivery, when you can cancel. Ask how long yours lasts and how any refund is calculated.</p>
+
+        <aside class="consult-inline on-navy" aria-label="Free consultation">
+          <p>You understand the basics. Now ask how they relate to your retirement goals, income needs and access to your money.</p>
+          <a class="btn btn-gold" href="#book" data-consult="after_liquidity">Schedule a Free 30-Minute Consultation</a>
+          <small>A conversation with a licensed insurance professional who may discuss insurance products. No obligation to purchase.</small>
+        </aside>
+      </section>
+
+      <section class="sec" id="q3" data-section>
+        <h2><span class="q-mark">Question 3</span>What costs and trade-offs apply?</h2>
+        <p>Costs depend on the contract, so ask for them in writing. Some are easy to see. Others are built in.</p>
+        <ul>
+          <li><strong>Contract fees.</strong> Some contracts charge annual administrative fees. Variable annuities often add insurance charges and investment expenses. A contract with few visible fees may carry its cost in a lower rate or cap.</li>
+          <li><strong>Optional riders.</strong> Income and death-benefit riders usually cost extra each year. Ask what the charge is calculated on, and whether you pay it even if you never use the benefit.</li>
+          <li><strong>Exit costs.</strong> These include surrender charges and, in some contracts, a market value adjustment that can change what you receive if you leave early.</li>
+          <li><strong>Agent compensation.</strong> Agents are commonly paid a commission by the insurer. You may not get a separate bill, but it's part of how the product is priced. Commission isn't wrong. It's simply fair to ask how you're paid on this contract, and whether that would differ on another option.</li>
+        </ul>
+        <p>Finally, ask what you'd give up. Protection, income features and access all come at a price, often paid through limited growth or limited access. Ask: compared with keeping this money where it is, what do I gain and what do I lose?</p>
+      </section>
+
+      <section class="sec" id="q4" data-section>
+        <h2><span class="q-mark">Question 4</span>What exactly is guaranteed, under what conditions, and by whom?</h2>
+        <p>When you hear the word "guaranteed," ask three follow-up questions.</p>
+        <ul>
+          <li><strong>What is guaranteed?</strong> A minimum interest rate, protection from index losses and a lifetime payment are separate promises. One doesn't imply the others.</li>
+          <li><strong>Under what conditions?</strong> A guarantee may depend on buying a rider, waiting a certain time, reaching a certain age, or staying within withdrawal limits. Taking too much can reduce or end an income benefit.</li>
+          <li><strong>By whom?</strong> Guarantees depend on the claims-paying ability of the issuing insurance company. Annuities are not bank deposits and are not FDIC-insured. Ask how independent rating agencies rate the insurer.</li>
+        </ul>
+        <h3>Two numbers that aren't the same</h3>
+        <p>A contract with an income rider may show two values. They do different things, so keep them apart.</p>
+        <div class="two-num">
+          <div class="num-card"><strong>Income benefit base</strong><span>A calculation number used to work out future income under a rider. You generally can't withdraw it as cash.</span></div>
+          <div class="num-card"><strong>Cash available to withdraw</strong><span>What you'd actually receive if you left, after any surrender charges and adjustments.</span></div>
+        </div>
+        <p>A benefit base can grow at a stated rate while your cash value does something different. If you see a large number on an illustration, ask: can I take this out as cash today? Be just as careful with bonuses, which may apply only to the benefit base or come with longer restrictions.</p>
+      
+        <aside class="cta-soft no-print" aria-label="Free consultation">
+          <p>Not sure what a guarantee in an illustration really covers? Ask how it works, what it depends on and who stands behind it.</p>
+          <a class="btn btn-navy" href="#book" data-consult="after_guarantees">Schedule a Free 30-Minute Consultation</a>
+          <small>With a licensed insurance professional who may discuss insurance products. No obligation to purchase.</small>
+        </aside>
+      </section>
+
+      <section class="sec" id="q5" data-section>
+        <h2><span class="q-mark">Question 5</span>How do taxes work?</h2>
+        <p>Tax treatment depends on the money you use and how you take it out. This is general information, not tax advice.</p>
+        <ul>
+          <li><strong>Qualified contracts</strong> are funded with retirement money, such as a traditional IRA or 401(k). If the money went in pre-tax, withdrawals are generally taxed as ordinary income. Required minimum distribution rules may apply. Roth accounts follow different rules.</li>
+          <li><strong>Nonqualified contracts</strong> are bought with after-tax money. What you paid in is your <strong>after-tax basis</strong>, which isn't taxed again when you get it back. <strong>Earnings</strong> are generally taxed as ordinary income when you withdraw them.</li>
+        </ul>
+        <p>Timing matters too. With withdrawals from most nonqualified contracts, earnings generally come out first. If you convert to regular annuity payments, each payment usually includes part earnings and part return of basis.</p>
+        <p><strong>Early distributions.</strong> Taking taxable money before age 59½ can trigger a 10% additional federal tax on top of regular income tax. There are exceptions, such as death, disability and certain series of substantially equal payments. Which ones apply depends on the type of contract or account. State taxes may also apply.</p>
+        <p><strong>Inside an IRA or 401(k).</strong> These accounts are already tax-deferred, so an annuity inside one adds no extra tax deferral. Any reason to use one there has to come from something else, such as an income feature.</p>
+        <p>Beneficiaries may also owe income tax on earnings they inherit. Take your individual questions to a tax professional before you act.</p>
+      </section>
+
+      <section class="sec" id="not-fit" data-section>
+        <h2>When an annuity may not fit</h2>
+        <p>Walking away can be the right decision. An annuity may be a poor match if:</p>
+        <ul>
+          <li><strong>Your time horizon is short.</strong> You may need this money within the next few years or before a surrender period ends.</li>
+          <li><strong>Your emergency savings are thin.</strong> Build that cushion first.</li>
+          <li><strong>You need unrestricted access.</strong> A contract that limits withdrawals conflicts with that need.</li>
+          <li><strong>Dependable income already covers your essentials,</strong> and you aren't trying to solve an income problem.</li>
+          <li><strong>You can't explain it.</strong> If you can't describe in your own words how it works and how you'd get out, you aren't ready.</li>
+          <li><strong>You feel rushed.</strong> A good decision can survive a night's sleep and a second opinion.</li>
+        </ul>
+      
+        <aside class="cta-soft no-print" aria-label="Free consultation">
+          <p>Not sure which side of this list you're on? A consultation can end with "this isn't a fit," and that's a useful answer.</p>
+          <a class="btn btn-navy" href="#book" data-consult="after_not_fit">Schedule a Free 30-Minute Consultation</a>
+          <small>With a licensed insurance professional who may discuss insurance products. No obligation to purchase.</small>
+        </aside>
+      </section>
+
+      <section class="sec" id="owners" data-section>
+        <h2>If you already own an annuity</h2>
+        <p>Understand what you have before you change anything. Gather your latest statement and your contract, including any rider pages. Then review:</p>
+        <ul>
+          <li>Any remaining surrender charges and when they end</li>
+          <li>What you pay for riders each year</li>
+          <li>The benefits you hold, including any death benefit</li>
+          <li>Your income options and when they begin</li>
+          <li>Your cash value, as distinct from any benefit base</li>
+        </ul>
+        <p>Be careful with offers to replace a contract. A replacement can restart surrender restrictions, add new costs and lose valuable benefits, including older terms that may no longer be available.</p>
+        <p>A 1035 exchange can move value from one annuity to another without immediate tax when the rules are met. That only addresses taxes. It doesn't make a new contract better. Neither a replacement nor an exchange should be automatic. Ask for a written side-by-side comparison of what you'd keep, lose and pay.</p>
+      
+        <aside class="cta-soft no-print" aria-label="Free consultation">
+          <p>Already own an annuity? Ask what your current contract does before you change anything. Keeping it may be the right answer.</p>
+          <a class="btn btn-navy" href="#book" data-consult="after_owners">Schedule a Free 30-Minute Consultation</a>
+          <small>With a licensed insurance professional who may discuss insurance products. No obligation to purchase.</small>
+        </aside>
+      </section>
+
+      <section class="sec" id="checklist" data-section>
+        <h2>Checklist for your conversation</h2>
+        <p>Bring this list to any licensed professional. Ask for clear answers in writing, and take time to think them over.</p>
+        <ul class="check-list" id="checkList">
+          <li><label><input type="checkbox"><span>I know what job this money would do: income, accumulation or legacy.</span></label></li>
+          <li><label><input type="checkbox"><span>I have separate emergency money I can reach without penalty.</span></label></li>
+          <li><label><input type="checkbox"><span>Are you licensed in my state? Which insurers can you offer?</span></label></li>
+          <li><label><input type="checkbox"><span>What type of annuity is this, and which company issues it?</span></label></li>
+          <li><label><input type="checkbox"><span>How is growth determined, and what can the insurer change?</span></label></li>
+          <li><label><input type="checkbox"><span>What is the surrender schedule, year by year?</span></label></li>
+          <li><label><input type="checkbox"><span>How much can I withdraw each year without a charge?</span></label></li>
+          <li><label><input type="checkbox"><span>What are all the fees and rider costs, in writing?</span></label></li>
+          <li><label><input type="checkbox"><span>How are you paid if I buy this?</span></label></li>
+          <li><label><input type="checkbox"><span>What exactly is guaranteed, under what conditions, and by whom?</span></label></li>
+          <li><label><input type="checkbox"><span>Is this number a benefit base or cash I can withdraw?</span></label></li>
+          <li><label><input type="checkbox"><span>Is this contract qualified or nonqualified, and how will withdrawals be taxed?</span></label></li>
+          <li><label><input type="checkbox"><span>What happens to the money and payments when I die?</span></label></li>
+          <li><label><input type="checkbox"><span>If this replaces a contract, what would I lose or restart?</span></label></li>
+          <li><label><input type="checkbox"><span>Can I take the documents home and review them with my family or tax professional?</span></label></li>
+        </ul>
+        <div class="btn-row"><button class="btn btn-line" type="button" data-print="checklist">Print this checklist</button></div>
+      
+        <aside class="cta-soft no-print" aria-label="Free consultation">
+          <p>Ready to use this list? Bring it to your free consultation and ask every question on it.</p>
+          <a class="btn btn-navy" href="#book" data-consult="after_checklist">Schedule a Free 30-Minute Consultation</a>
+          <small>With a licensed insurance professional who may discuss insurance products. No obligation to purchase.</small>
+        </aside>
+      </section>
+
+      <section class="sec" id="worksheet" data-section>
+        <h2>Monthly income worksheet</h2>
+        <p>This shows whether dependable income covers your essential bills. Use monthly amounts. Round numbers are fine.</p>
+        <div class="ws" id="ws">
+          <p class="ws-label">Educational only. This is not a recommendation or a quote. Your entries stay in this browser and are never sent to us.</p>
+          <fieldset>
+            <legend>Essential monthly expenses</legend>
+            <label class="ws-row" for="ws-housing"><span>Housing, property tax, home insurance</span><span class="money"><span>$</span><input id="ws-housing" data-ws="out" inputmode="numeric" autocomplete="off"></span></label>
+            <label class="ws-row" for="ws-utilities"><span>Utilities and phone</span><span class="money"><span>$</span><input id="ws-utilities" data-ws="out" inputmode="numeric" autocomplete="off"></span></label>
+            <label class="ws-row" for="ws-food"><span>Food and household</span><span class="money"><span>$</span><input id="ws-food" data-ws="out" inputmode="numeric" autocomplete="off"></span></label>
+            <label class="ws-row" for="ws-health"><span>Health care and insurance</span><span class="money"><span>$</span><input id="ws-health" data-ws="out" inputmode="numeric" autocomplete="off"></span></label>
+            <label class="ws-row" for="ws-transport"><span>Transportation</span><span class="money"><span>$</span><input id="ws-transport" data-ws="out" inputmode="numeric" autocomplete="off"></span></label>
+            <label class="ws-row" for="ws-debt"><span>Minimum debt payments</span><span class="money"><span>$</span><input id="ws-debt" data-ws="out" inputmode="numeric" autocomplete="off"></span></label>
+            <label class="ws-row" for="ws-other-out"><span>Other essentials</span><span class="money"><span>$</span><input id="ws-other-out" data-ws="out" inputmode="numeric" autocomplete="off"></span></label>
+          </fieldset>
+          <fieldset>
+            <legend>Existing dependable income</legend>
+            <label class="ws-row" for="ws-ss"><span>Social Security</span><span class="money"><span>$</span><input id="ws-ss" data-ws="in" inputmode="numeric" autocomplete="off"></span></label>
+            <label class="ws-row" for="ws-pension"><span>Pension</span><span class="money"><span>$</span><input id="ws-pension" data-ws="in" inputmode="numeric" autocomplete="off"></span></label>
+            <label class="ws-row" for="ws-other-in"><span>Other dependable income</span><span class="money"><span>$</span><input id="ws-other-in" data-ws="in" inputmode="numeric" autocomplete="off"></span></label>
+          </fieldset>
+          <div class="ws-totals" aria-live="polite">
+            <div class="ws-total"><span>Essential expenses</span><span id="ws-total-out">$0</span></div>
+            <div class="ws-total"><span>Dependable income</span><span id="ws-total-in">$0</span></div>
+            <div class="ws-total big"><span id="ws-result-label">Remaining gap</span><span id="ws-result">$0</span></div>
+          </div>
+          <p class="ws-msg" id="ws-msg">Enter your amounts to see the result.</p>
+          <div class="btn-row">
+            <button class="btn btn-line" type="button" data-print="worksheet">Print this worksheet</button>
+            <button class="btn btn-line" type="button" id="ws-clear">Clear my entries</button>
+          </div>
+        </div>
+        <p class="note">Amounts are in today's dollars. Prices can rise, and not every income source rises with them. A gap doesn't mean you need an annuity. It's simply a useful number to discuss.</p>
+      
+        <aside class="cta-soft no-print" aria-label="Free consultation">
+          <p>Know your number? Bring it to the call. We never see what you typed here, so you decide what to share.</p>
+          <a class="btn btn-navy" href="#book" data-consult="after_worksheet">Schedule a Free 30-Minute Consultation</a>
+          <small>With a licensed insurance professional who may discuss insurance products. No obligation to purchase.</small>
+        </aside>
+      </section>
+
+      <div id="guide-end" aria-hidden="true"></div>
+    </article>
+  </div>
+</main>
+
+<section class="next on-navy" id="next-step" aria-labelledby="next-title">
+  <div class="wrap">
+    <div class="next-inner">
+      <h2 id="next-title">Schedule a Free 30-Minute Consultation</h2>
+      <p class="value">You understand the basics. Now ask how they relate to your retirement goals, income needs and access to your money.</p>
+      <div>
+        <h3>WHAT WE'LL COVER</h3>
+        <ul>
+          <li>Discuss your retirement questions.</li>
+          <li>Understand relevant annuity features and trade-offs.</li>
+          <li>Explore whether an annuity deserves further consideration—or isn't a fit.</li>
+        </ul>
+      </div>
+      <p class="plain">This is a conversation with a licensed insurance professional who may discuss insurance products. There is no obligation to purchase. It isn't a full financial plan, and you shouldn't assume it is independent fiduciary advice. Ask the professional how they're licensed and paid.</p>
+      <a class="btn btn-gold" href="#book" data-consult="end_of_guide">Schedule a Free 30-Minute Consultation</a>
+    </div>
+  </div>
+</section>
+
+<section class="book-sec" id="book" aria-labelledby="book-title" tabindex="-1">
+  <div class="wrap">
+    <div class="book-card">
+      <h2 id="book-title">Book your consultation</h2>
+      <div class="preview-note" id="previewNote">
+        <strong>Preview. Nothing can be entered or sent here yet.</strong>
+        <span>Live booking stays off until these items are configured:</span>
+        <ul id="missingList"><li>Business and integration details</li></ul>
+      </div>
+      <noscript><p>Booking needs JavaScript. The guide above works without it. To reach us instead: <span>[CONTACT DETAILS]</span></p></noscript>
+
+      <form id="bookForm" class="steps-form" novalidate data-live="false">
+        <fieldset class="panel" id="panel-state" disabled>
+          <h3 id="h-state" tabindex="-1">Step 1: Your state</h3>
+          <p class="hint">An agent must be licensed for your state, so we ask this first.</p>
+          <div class="field">
+            <label for="state">State of residence</label>
+            <select id="state" autocomplete="address-level1"><option value="">Choose your state</option></select>
+            <p class="err" id="state-err" hidden></p>
+          </div>
+          <button class="btn btn-navy" type="button" id="stateNext">Check availability</button>
+        </fieldset>
+
+        <div class="panel" id="panel-none" hidden>
+          <h3 id="h-none" tabindex="-1">We can't schedule in your state right now</h3>
+          <p>We don't currently have a licensed professional available for your state, so we won't ask for your details. The guide is still yours to read, print and share.</p>
+          <a class="btn btn-line" href="#guide">Back to the guide</a>
+          <button class="link-btn" type="button" data-restart>Choose a different state</button>
+        </div>
+
+        <fieldset class="panel" id="panel-slot" disabled>
+          <h3 id="h-slot" tabindex="-1">Step 2: Choose a time</h3>
+          <div class="recip" id="recipient">
+            <strong>Who receives your inquiry</strong>
+            <span id="recipientText">Your details go to <span data-cfg="legalEntity">[LEGAL ENTITY]</span>, acting as <span data-cfg="businessRole">[BUSINESS ROLE — insurance agency or referral service]</span>, and to the licensed professional named here for your state: <span>[LICENSED STATES / AGENT ROUTING]</span>.</span>
+          </div>
+          <p class="hint" id="slotHint">Times come directly from the licensed professional's calendar and appear here once it is connected. No sample times are shown.</p>
+          <div class="slots" id="slots" role="radiogroup" aria-labelledby="h-slot"></div>
+          <p class="err" id="slot-err" hidden></p>
+          <button class="btn btn-navy" type="button" id="slotNext">Continue</button>
+          <button class="link-btn" type="button" data-restart>Change state</button>
+        </fieldset>
+
+        <fieldset class="panel" id="panel-details" disabled>
+          <h3 id="h-details" tabindex="-1">Step 3: Your details</h3>
+          <p class="hint">Please don't enter a Social Security number, account number, account balance or password.</p>
+          <div class="two">
+            <div class="field"><label for="firstName">First name</label><input id="firstName" autocomplete="given-name"><p class="err" hidden></p></div>
+            <div class="field"><label for="lastName">Last name</label><input id="lastName" autocomplete="family-name"><p class="err" hidden></p></div>
+          </div>
+          <div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="email"><p class="err" hidden></p></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" type="tel" autocomplete="tel"><p class="err" hidden></p></div>
+          <div class="field">
+            <label for="timing">When do you plan to retire? <span class="opt">(optional)</span></label>
+            <select id="timing">
+              <option value="prefer_not_to_say">Prefer not to say</option>
+              <option value="already_retired">Already retired</option>
+              <option value="within_1_year">Within 1 year</option>
+              <option value="1_to_5_years">1 to 5 years</option>
+              <option value="5_to_10_years">5 to 10 years</option>
+              <option value="over_10_years">More than 10 years</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="savings">Approximate retirement savings <span class="opt">(optional)</span></label>
+            <select id="savings">
+              <option value="prefer_not_to_say">Prefer not to say</option>
+              <option value="under_100k">Under $100,000</option>
+              <option value="100k_249k">$100,000 to $249,999</option>
+              <option value="250k_499k">$250,000 to $499,999</option>
+              <option value="500k_999k">$500,000 to $999,999</option>
+              <option value="1m_plus">$1,000,000 or more</option>
+            </select>
+          </div>
+          <label class="consent" for="consentContact">
+            <input id="consentContact" type="checkbox">
+            <span id="consentText">[LEGALLY REVIEWED CONTACT/CONSENT LANGUAGE]</span>
+          </label>
+          <p class="err" id="consent-err" hidden></p>
+          <label class="consent" for="consentMarketing" id="marketingWrap">
+            <input id="consentMarketing" type="checkbox">
+            <span><span class="opt">Optional, not required to book: </span><span id="marketingText">[LEGALLY REVIEWED CONTACT/CONSENT LANGUAGE]</span></span>
+          </label>
+          <div class="status" id="bookStatus" role="alert"></div>
+          <button class="btn btn-navy" type="submit" id="bookSubmit" disabled>Book My Consultation</button>
+          <button class="link-btn" type="button" id="backToSlots">Choose a different time</button>
+        </fieldset>
+
+        <div class="panel" id="panel-done" hidden>
+          <div class="done">
+            <h3 id="h-done" tabindex="-1">Your consultation is confirmed</h3>
+            <p id="doneText"></p>
+            <p class="hint">No obligation to purchase. You can bring the checklist from this guide.</p>
+            <a class="btn btn-line" href="#checklist">Go to the checklist</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="foot on-navy">
+  <div class="wrap">
+    <p><span data-cfg="brand">[BRAND]</span> is operated by <span data-cfg="legalEntity">[LEGAL ENTITY]</span>, <span data-cfg="businessRole">[BUSINESS ROLE — insurance agency or referral service]</span>.</p>
+    <p data-cfg="licenseDisclosure">[LICENSE/DISCLOSURE TEXT]</p>
+    <p>This guide is general education. It isn't individual financial, tax or legal advice, and it isn't an offer to sell any product. Annuities are insurance contracts, and terms and availability vary by contract, insurer and state. Guarantees depend on the claims-paying ability of the issuing insurer. Annuities are not bank deposits and are not FDIC-insured. Variable annuities are securities and can lose value, including principal. Read the prospectus before investing.</p>
+    <p>Contact: <span data-cfg="contact">[CONTACT DETAILS]</span></p>
+    <nav aria-label="Legal"><a data-href="privacyUrl">Privacy Policy</a><a data-href="termsUrl">Terms</a></nav>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky"><a href="#book" data-consult="sticky">Schedule a Free 30-Minute Consultation</a></div>
+
+<script>
+/* ===== BUSINESS CONFIG START =====
+   Everything here is public. Never put API keys, tokens or calendar credentials in this file.
+   crmEndpoint and calendarUrl must be YOUR server-side routes, which hold the secrets.
+   Booking stays disabled until every value below is real.
+
+   licensedStates, once configured (keep it in sync with server-side checks):
+     { TX: { routeId:"tx-1", recipient:"Full name or agency", role:"Licensed insurance agent", license:"TX license no. ..." } }
+   A state with a missing recipient, role or license is treated as not covered.
+
+   Server contracts:
+     POST {crmEndpoint}          lead JSON                    -> { ok:true, leadId }
+     POST {calendarUrl}/availability { routeId, state }       -> { slots:[{ id, start(ISO 8601) }] }
+     POST {calendarUrl}/book     { routeId, state, slotId, leadId, idempotencyKey }
+                                                              -> { confirmed:true, appointmentId, start }
+     Slot already taken: respond 409. Anything else without confirmed:true is treated as not booked.
+*/
+const CONFIG = {
+  brand: "[BRAND]",
+  legalEntity: "[LEGAL ENTITY]",
+  businessRole: "[BUSINESS ROLE — insurance agency or referral service]",
+  licenseDisclosure: "[LICENSE/DISCLOSURE TEXT]",
+  licensedStates: "[LICENSED STATES / AGENT ROUTING]",
+  calendarUrl: "[CALENDAR_URL]",
+  crmEndpoint: "[CRM_ENDPOINT]",
+  privacyUrl: "[PRIVACY_URL]",
+  termsUrl: "[TERMS_URL]",
+  contact: "[CONTACT DETAILS]",
+  consentLanguage: "[LEGALLY REVIEWED CONTACT/CONSENT LANGUAGE]",
+  /* Optional, separate marketing/SMS language. Set to "" to remove the checkbox entirely. */
+  marketingConsentLanguage: "[LEGALLY REVIEWED CONTACT/CONSENT LANGUAGE]"
+};
+/* ===== BUSINESS CONFIG END ===== */
+
+(function () {
+  "use strict";
+  const $ = (id) => document.getElementById(id);
+  const isUnset = (v) => typeof v !== "string" || !v.trim() || /\[[^\]]+\]/.test(v);
+  const okEndpoint = (v) => !isUnset(v) && /^(https:\/\/|\/)/.test(v);
+  const store = {
+    get(k) { try { return JSON.parse(sessionStorage.getItem(k)); } catch (e) { return null; } },
+    set(k, v) { try { sessionStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
+    del(k) { try { sessionStorage.removeItem(k); } catch (e) {} }
+  };
+
+  /* ANALYTICS INTEGRATION POINT: a tag manager reads window.dataLayer. No tag is loaded here.
+     Three separate levels: guide engagement, lead_submitted, appointment_confirmed.
+     Events never carry names, contact details, state, savings or worksheet values. */
+  function track(event, props) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(Object.assign({ event: event }, props || {}));
+  }
+
+  /* Campaign attribution: allowlisted params only; values that look personal are dropped. */
+  function captureAttribution() {
+    const keys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "fbclid"];
+    const saved = store.get("ag_attr") || {};
+    const q = new URLSearchParams(location.search);
+    keys.forEach((k) => {
+      const v = q.get(k);
+      if (v && v.length <= 256 && !/@|\d{7,}/.test(k === "fbclid" ? "" : v) && !saved[k]) saved[k] = v;
+    });
+    store.set("ag_attr", saved);
+    return saved;
+  }
+  const attribution = captureAttribution();
+
+  /* Fill business details */
+  document.querySelectorAll("[data-cfg]").forEach((el) => { el.textContent = CONFIG[el.dataset.cfg]; });
+  document.querySelectorAll("[data-href]").forEach((el) => {
+    const u = CONFIG[el.dataset.href];
+    if (!isUnset(u)) el.href = u; else el.textContent += " (" + u + ")";
+  });
+
+  /* Print */
+  document.querySelectorAll("[data-print]").forEach((b) => b.addEventListener("click", () => {
+    const part = b.dataset.print;
+    track("print_click", { part: part });
+    if (part !== "all") { document.body.classList.add("print-one"); $(part).classList.add("print-only"); }
+    window.print();
+  }));
+  window.addEventListener("afterprint", () => {
+    document.body.classList.remove("print-one");
+    document.querySelectorAll(".print-only").forEach((e) => e.classList.remove("print-only"));
+  });
+  if (/FBAN|FBAV|FB_IAB|Instagram/i.test(navigator.userAgent)) {
+    document.querySelectorAll("[data-fb-note]").forEach((e) => { e.hidden = false; });
+  }
+
+  /* Guide engagement + contents highlight */
+  const tocLinks = {};
+  document.querySelectorAll(".toc a").forEach((a) => { tocLinks[a.getAttribute("href").slice(1)] = a; });
+  const seen = new Set();
+  if ("IntersectionObserver" in window) {
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        Object.values(tocLinks).forEach((a) => a.removeAttribute("aria-current"));
+        const l = tocLinks[en.target.id];
+        if (l) l.setAttribute("aria-current", "true");
+        if (!seen.has(en.target.id)) {
+          if (!seen.size) track("guide_started");
+          seen.add(en.target.id);
+          track("guide_section_view", { section: en.target.id });
+        }
+      });
+    }, { rootMargin: "-25% 0px -65% 0px" });
+    document.querySelectorAll("[data-section]").forEach((s) => spy.observe(s));
+    let finished = false;
+    new IntersectionObserver((en) => {
+      if (en[0].isIntersecting && !finished) { finished = true; track("guide_completed"); }
+    }).observe($("guide-end"));
+  }
+  document.querySelectorAll("[data-track]").forEach((a) => a.addEventListener("click", () => track(a.dataset.track)));
+
+  /* Checklist, kept for this browser session only */
+  const boxes = Array.from(document.querySelectorAll("#checkList input"));
+  (store.get("ag_check") || []).forEach((i) => { if (boxes[i]) boxes[i].checked = true; });
+  let checkUsed = false;
+  boxes.forEach((b) => b.addEventListener("change", () => {
+    store.set("ag_check", boxes.reduce((a, x, i) => (x.checked ? a.concat(i) : a), []));
+    if (!checkUsed) { checkUsed = true; track("checklist_used"); }
+  }));
+
+  /* Worksheet: inputs have no name and sit outside any form. Values never leave the browser. */
+  const wsInputs = Array.from(document.querySelectorAll("[data-ws]"));
+  const usd = (n) => "$" + Math.round(n).toLocaleString("en-US");
+  const amount = (el) => Number(el.value.replace(/[^0-9.]/g, "")) || 0;
+  function calcWorksheet() {
+    const sum = (t) => wsInputs.filter((i) => i.dataset.ws === t).reduce((a, i) => a + amount(i), 0);
+    const out = sum("out"), inc = sum("in"), gap = out - inc;
+    $("ws-total-out").textContent = usd(out);
+    $("ws-total-in").textContent = usd(inc);
+    $("ws-result-label").textContent = gap >= 0 ? "Remaining gap" : "Income above essentials";
+    $("ws-result").textContent = usd(Math.abs(gap));
+    $("ws-msg").textContent = !out && !inc ? "Enter your amounts to see the result."
+      : gap > 0 ? "This is the part of your essential bills not covered by dependable income each month."
+      : "On these numbers, dependable income covers your essential bills.";
+  }
+  const savedWs = store.get("ag_ws") || {};
+  wsInputs.forEach((i) => { if (savedWs[i.id]) i.value = savedWs[i.id]; });
+  let wsUsed = false;
+  wsInputs.forEach((i) => i.addEventListener("input", () => {
+    i.value = i.value.replace(/[^0-9.,]/g, "");
+    const data = {}; wsInputs.forEach((x) => { if (x.value) data[x.id] = x.value; });
+    store.set("ag_ws", data);
+    calcWorksheet();
+    if (!wsUsed) { wsUsed = true; track("worksheet_used"); }
+  }));
+  $("ws-clear").addEventListener("click", () => { wsInputs.forEach((i) => { i.value = ""; }); store.del("ag_ws"); calcWorksheet(); });
+  calcWorksheet();
+
+  /* Sticky mobile button: hidden over the hero, the booking area, and while typing */
+  const sticky = $("sticky");
+  if ("IntersectionObserver" in window) {
+    let blocked = new Set(["hero"]), typing = false;
+    const paint = () => sticky.classList.toggle("show", !blocked.size && !typing);
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { e.isIntersecting ? blocked.add(e.target.dataset.sk) : blocked.delete(e.target.dataset.sk); });
+      paint();
+    });
+    [[".hero", "hero"], ["#next-step", "next"], ["#book", "book"], [".foot", "foot"]].forEach(([s, k]) => {
+      const el = document.querySelector(s); el.dataset.sk = k; io.observe(el);
+    });
+    document.querySelectorAll(".cta-soft,.consult-inline").forEach((el, i) => { el.dataset.sk = "cta" + i; io.observe(el); });
+    document.addEventListener("focusin", (e) => { typing = /INPUT|SELECT/.test(e.target.tagName) && e.target.type !== "checkbox"; paint(); });
+    document.addEventListener("focusout", () => { typing = false; paint(); });
+  }
+
+  /* Booking */
+  const STATES = { AL:"Alabama",AK:"Alaska",AZ:"Arizona",AR:"Arkansas",CA:"California",CO:"Colorado",CT:"Connecticut",DE:"Delaware",DC:"District of Columbia",FL:"Florida",GA:"Georgia",HI:"Hawaii",ID:"Idaho",IL:"Illinois",IN:"Indiana",IA:"Iowa",KS:"Kansas",KY:"Kentucky",LA:"Louisiana",ME:"Maine",MD:"Maryland",MA:"Massachusetts",MI:"Michigan",MN:"Minnesota",MS:"Mississippi",MO:"Missouri",MT:"Montana",NE:"Nebraska",NV:"Nevada",NH:"New Hampshire",NJ:"New Jersey",NM:"New Mexico",NY:"New York",NC:"North Carolina",ND:"North Dakota",OH:"Ohio",OK:"Oklahoma",OR:"Oregon",PA:"Pennsylvania",RI:"Rhode Island",SC:"South Carolina",SD:"South Dakota",TN:"Tennessee",TX:"Texas",UT:"Utah",VT:"Vermont",VA:"Virginia",WA:"Washington",WV:"West Virginia",WI:"Wisconsin",WY:"Wyoming" };
+  const stateSel = $("state");
+  Object.keys(STATES).forEach((c) => stateSel.add(new Option(STATES[c], c)));
+
+  const routeValid = (r) => r && !isUnset(r.routeId) && !isUnset(r.recipient) && !isUnset(r.role) && !isUnset(r.license);
+  const routing = (CONFIG.licensedStates && typeof CONFIG.licensedStates === "object") ? CONFIG.licensedStates : {};
+  const LABELS = { brand:"Brand name", legalEntity:"Legal entity", businessRole:"Business role", licenseDisclosure:"License and disclosure text", calendarUrl:"Calendar integration", crmEndpoint:"CRM endpoint", privacyUrl:"Privacy policy link", termsUrl:"Terms link", contact:"Contact details", consentLanguage:"Reviewed contact language" };
+  const missing = Object.keys(LABELS).filter((k) => (k === "calendarUrl" || k === "crmEndpoint") ? !okEndpoint(CONFIG[k]) : isUnset(CONFIG[k]));
+  const missingLabels = missing.map((k) => LABELS[k]);
+  if (!Object.values(routing).some(routeValid)) missingLabels.push("Licensed states and agent routing");
+  if (CONFIG.marketingConsentLanguage && isUnset(CONFIG.marketingConsentLanguage)) missingLabels.push("Reviewed marketing language, or remove the option");
+  const LIVE = missingLabels.length === 0;
+
+  /* CTA tracking; moves focus into booking for keyboard and screen-reader users */
+  document.querySelectorAll("[data-consult]").forEach((a) => a.addEventListener("click", () => {
+    track("consult_cta_click", { location: a.dataset.consult });
+    setTimeout(() => $("book").focus({ preventScroll: true }), 450);
+  }));
+
+  if (!LIVE) {
+    const list = $("missingList");
+    list.textContent = "";
+    missingLabels.forEach((m) => { const li = document.createElement("li"); li.textContent = m; list.appendChild(li); });
+    $("slotNext").disabled = true;
+    return; /* Every booking control stays disabled. No handler below is attached. */
+  }
+
+  /* ===== LIVE BOOKING ===== */
+  $("previewBar").hidden = true;
+  $("previewNote").hidden = true;
+  $("bookForm").dataset.live = "true";
+  $("consentText").textContent = CONFIG.consentLanguage;
+  if (CONFIG.marketingConsentLanguage) $("marketingText").textContent = CONFIG.marketingConsentLanguage;
+  else $("marketingWrap").remove();
+  $("bookSubmit").disabled = false;
+
+  const panels = ["panel-state", "panel-none", "panel-slot", "panel-details", "panel-done"];
+  const uuid = () => (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(16).slice(2));
+  const S = { state: "", route: null, slotId: "", slotStart: "", leadId: "", key: uuid(), busy: false };
+
+  function show(id, headingId) {
+    panels.forEach((p) => { $(p).hidden = p !== id; });
+    const fs = $(id); if (fs.tagName === "FIELDSET") fs.disabled = false;
+    const h = $(headingId); if (h) h.focus({ preventScroll: true });
+    document.querySelector("#book").scrollIntoView({ block: "start" });
+  }
+  panels.forEach((p) => { $(p).hidden = p !== "panel-state"; });
+  $("panel-state").disabled = false;
+  function fieldErr(el, msg) {
+    el.setAttribute("aria-invalid", msg ? "true" : "false");
+    const p = el.parentElement.querySelector(".err");
+    if (p) { p.textContent = msg || ""; p.hidden = !msg; }
+  }
+  function status(msg) { const s = $("bookStatus"); s.textContent = msg || ""; s.className = msg ? "status bad" : "status"; }
+
+  async function post(url, body) {
+    const ctl = new AbortController();
+    const timer = setTimeout(() => ctl.abort(), 15000);
+    try {
+      const r = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body), signal: ctl.signal, credentials: "omit" });
+      const data = await r.json().catch(() => ({}));
+      return { ok: r.ok, status: r.status, data: data };
+    } catch (e) {
+      return { ok: false, status: 0, data: {} };
+    } finally { clearTimeout(timer); }
+  }
+  const fmt = (iso) => new Intl.DateTimeFormat("en-US", { weekday: "long", month: "long", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(new Date(iso));
+
+  async function loadSlots(notice) {
+    const hint = $("slotHint"), box = $("slots");
+    box.textContent = ""; S.slotId = ""; S.slotStart = "";
+    $("slotNext").hidden = true;
+    hint.textContent = "Checking the calendar…";
+    const res = await post(CONFIG.calendarUrl.replace(/\/$/, "") + "/availability", { routeId: S.route.routeId, state: S.state });
+    const slots = res.ok && Array.isArray(res.data.slots) ? res.data.slots.filter((s) => s && s.id && !isNaN(Date.parse(s.start))) : null;
+    if (!slots) { hint.textContent = "We couldn't load the calendar. Please try again shortly. Contact: " + CONFIG.contact; return; }
+    if (!slots.length) { hint.textContent = "No times are open right now. Please check back soon, or reach us at " + CONFIG.contact + "."; return; }
+    hint.textContent = (notice ? notice + " " : "") + "Times are shown in your local time.";
+    slots.forEach((s, i) => {
+      const l = document.createElement("label"); l.className = "slot";
+      const r = document.createElement("input"); r.type = "radio"; r.name = "slot"; r.id = "slot-" + i; r.value = s.id;
+      r.addEventListener("change", () => { S.slotId = s.id; S.slotStart = s.start; $("slot-err").hidden = true; });
+      const t = document.createElement("span"); t.textContent = fmt(s.start);
+      l.append(r, t); box.appendChild(l);
+    });
+    $("slotNext").hidden = false;
+  }
+
+  $("stateNext").addEventListener("click", async () => {
+    S.state = stateSel.value;
+    if (!S.state) { fieldErr(stateSel, "Please choose your state."); stateSel.focus(); return; }
+    fieldErr(stateSel, "");
+    const r = routing[S.state];
+    const covered = routeValid(r);
+    track("coverage_checked", { covered: covered });
+    if (!covered) { show("panel-none", "h-none"); return; }
+    if (!S.route || S.route.routeId !== r.routeId) { S.leadId = ""; S.key = uuid(); }
+    S.route = r;
+    $("recipientText").textContent = "Your details go to " + CONFIG.legalEntity + ", acting as " + CONFIG.businessRole + ", and to " + r.recipient + ", " + r.role + ". " + r.license;
+    show("panel-slot", "h-slot");
+    await loadSlots();
+  });
+  document.querySelectorAll("[data-restart]").forEach((b) => b.addEventListener("click", () => show("panel-state", "h-state")));
+  $("slotNext").addEventListener("click", () => {
+    if (!S.slotId) { const e = $("slot-err"); e.textContent = "Please choose a time."; e.hidden = false; return; }
+    show("panel-details", "h-details");
+  });
+  $("backToSlots").addEventListener("click", async () => { show("panel-slot", "h-slot"); await loadSlots(); });
+
+  function validate() {
+    let first = null;
+    const need = (id, test, msg) => {
+      const el = $(id), bad = !test(el.value.trim());
+      fieldErr(el, bad ? msg : "");
+      if (bad && !first) first = el;
+    };
+    need("firstName", (v) => v.length > 0, "Please enter your first name.");
+    need("lastName", (v) => v.length > 0, "Please enter your last name.");
+    need("email", (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v), "Please enter an email address like name@example.com.");
+    need("phone", (v) => { const d = v.replace(/\D/g, ""); return d.length === 10 || (d.length === 11 && d[0] === "1"); }, "Please enter a 10-digit US phone number.");
+    const ce = $("consent-err"), agreed = $("consentContact").checked;
+    ce.textContent = agreed ? "" : "Please confirm you agree so the professional can contact you about this consultation.";
+    ce.hidden = agreed;
+    if (!agreed && !first) first = $("consentContact");
+    if (first) first.focus();
+    return !first;
+  }
+
+  $("bookForm").addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    if (S.busy || !validate()) return;
+    S.busy = true; status("");
+    const btn = $("bookSubmit"); btn.disabled = true; btn.textContent = "Confirming with the calendar…";
+    try {
+      if (!S.leadId) {
+        const marketing = $("consentMarketing");
+        const lead = await post(CONFIG.crmEndpoint, {
+          idempotencyKey: S.key,
+          firstName: $("firstName").value.trim(), lastName: $("lastName").value.trim(),
+          email: $("email").value.trim(), phone: $("phone").value.trim(), state: S.state,
+          retirementTiming: $("timing").value, savingsRange: $("savings").value,
+          routeId: S.route.routeId, recipientShown: S.route.recipient,
+          consultationConsent: { agreed: true, text: CONFIG.consentLanguage },
+          marketingConsent: { agreed: !!(marketing && marketing.checked), text: marketing && marketing.checked ? CONFIG.marketingConsentLanguage : null },
+          attribution: attribution, pageUrl: location.origin + location.pathname
+        });
+        if (!lead.ok || lead.data.ok !== true || !lead.data.leadId) {
+          status("We couldn't send your details, so no appointment was made. Please try again.");
+          return;
+        }
+        S.leadId = lead.data.leadId;
+        track("lead_submitted");
+      }
+      const res = await post(CONFIG.calendarUrl.replace(/\/$/, "") + "/book", {
+        routeId: S.route.routeId, state: S.state, slotId: S.slotId, leadId: S.leadId, idempotencyKey: S.key + ":" + S.slotId
+      });
+      if (res.ok && res.data.confirmed === true && res.data.appointmentId && !isNaN(Date.parse(res.data.start))) {
+        track("appointment_confirmed");
+        $("doneText").textContent = "Your consultation with " + S.route.recipient + " is booked for " + fmt(res.data.start) + ". Confirmation reference: " + res.data.appointmentId + ".";
+        $("bookForm").querySelectorAll("#panel-details input").forEach((i) => { if (i.type === "checkbox") i.checked = false; else i.value = ""; });
+        show("panel-done", "h-done");
+        return;
+      }
+      if (res.status === 409) {
+        show("panel-slot", "h-slot");
+        await loadSlots("That time was just taken. Please choose another.");
+        return;
+      }
+      status(res.status === 0
+        ? "We didn't get a confirmation from the calendar, so please don't count on this appointment yet. Try again, or reach us at " + CONFIG.contact + "."
+        : "The calendar didn't confirm this appointment, so it isn't booked. Please try again or choose a different time.");
+    } finally {
+      S.busy = false; btn.disabled = false; btn.textContent = "Book My Consultation";
+    }
+  });
+})();
+</script>
+</body>
+</html>
